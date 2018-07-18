@@ -12,13 +12,20 @@ public class BabySitterTest {
 	public void willCalculateOneHoursHerdPay() {
 		int actual = Babysitter.calculateBabysitterPay(5, 6, 7);
 		
-		assertEquals(6, actual);
+		assertEquals(10, actual);
 	}
 	
 	@Test
 	public void willCalculateTwoHoursHerdPay() {
 		int actual = Babysitter.calculateBabysitterPay(5, 7, 8);
 		
-		assertEquals(12, actual);
+		assertEquals(20, actual);
+	}
+	
+	@Test
+	public void calculatesHouseSittingPay() {
+		int actual = Babysitter.calculateBabysitterPay(5, 7, 6);
+		
+		assertEquals(16, actual);
 	}
 }
