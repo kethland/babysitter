@@ -7,9 +7,7 @@ public class Babysitter {
 
 	public static int calculateBabysitterPay(int arrival, int departure, int bedtime) {
 		int totalPay = 0;	
-		if (departure <= 4) {
-			departure += 12;
-		}
+		departure = normalizeAftermidnightTime(departure);
 		
 		for(int i = arrival; i < departure; i++ ) {
 			
@@ -18,6 +16,13 @@ public class Babysitter {
 			
 			}
 			return totalPay;
+	}
+
+	private static int normalizeAftermidnightTime(int departure) {
+		if (departure <= 4) {
+			departure += 12;
+		}
+		return departure;
 	}
 
 	private static int calculateLostSleepPay(int bedtime, int totalPay, int i) {
