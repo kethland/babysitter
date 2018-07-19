@@ -42,11 +42,6 @@ public class Babysitter {
 		return totalPay;
 	}
 
-	public static int calculateAfterMidnightPay(int arrival, int departure, int bedtime) {
-		
-		return 0;
-	}
-
 
 
 }
