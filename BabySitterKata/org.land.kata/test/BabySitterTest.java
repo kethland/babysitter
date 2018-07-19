@@ -28,4 +28,11 @@ public class BabySitterTest {
 		
 		assertEquals(16, actual);
 	}
+	
+	@Test
+	public void calculatesOneHourOfAfterMidnightPay() {
+		int actual = Babysitter.calculateBabysitterPay(12, 1, 6);
+		
+		assertEquals(8, actual);
+	}
 }
